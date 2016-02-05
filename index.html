@@ -17,19 +17,19 @@ table, td, th {
   
   <tr>
     <td>Hero Level</td>
-    <td><input value ="3" type="number" name="level" id="level" required></td>
+    <td><input value ="3" type="number" name="level" id="level" min="1" max="20" required></td>
   </tr>
   <tr>
     <td>AD</td>
-    <td><input value ="55"  type="number" name="totalDamage"  id="ad" required></td>
+    <td><input value ="55"  type="number" name="totalDamage"  min="1" id="ad" required></td>
   </tr>
   <tr>
     <td>Attack Speed from items %</td>
-    <td><input value ="15"  type="number" name="attackspeed" id="attackspeed" required></td>
+    <td><input value ="15"  type="number" name="attackspeed" min="0" id="attackspeed" required></td>
   </tr>
   <tr>
     <td>Crit % (0-100)</td>
-    <td><input value ="10"  type="number" name="crit" id="crit" required></td>
+    <td><input value ="10"  type="number" name="crit" min="0" max="100" id="crit" required></td>
   </tr>
   <tr>
     <td><input type="submit" id ="submit"></td>
@@ -50,8 +50,8 @@ table, td, th {
         crit = parseFloat($('#crit').val());
 		attackspeed = parseFloat($('#attackspeed').val());
         ad = parseFloat($('#ad').val());
-        var result = ad * (1 + jhinScaling[level] + (0.4 * (crit/100)) + (0.25 * (attackspeed/100)));
-        $('#result').html("Total AD: " + result.toFixed(3));
+        var result = ad * (1 + jhinScaling[level-1] + (0.4 * (crit/100)) + (0.25 * (attackspeed/100)));
+        $('#result').html("Total AD: " + result.toFixed(2));
 
 
     });
