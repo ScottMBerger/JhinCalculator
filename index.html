@@ -1,13 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table {
+    border-collapse: collapse;
+}
 
+table, td, th {
+    border: 1px solid black;
+}
+</style>
+</head>
+<body>
 <h1>Jhin Calculator</h1><br>
-
-  Hero Level: <input value ="3" type="number" name="level" id="level" required><br>
-  AD:<input value ="55"  type="number" name="totalDamage"  id="ad" required><br>
-  Crit % (0-100):<input value ="10"  type="number" name="crit" id="crit" required><br>
-  Bonus Attack Speed from items % :<input value ="15"  type="number" name="attackspeed" id="attackspeed" required><br>
-	<input type="submit" id ="submit"><br>
-  <span id = "result"></span>
-
+<table>
+  
+  <tr>
+    <td>Hero Level</td>
+    <td><input value ="3" type="number" name="level" id="level" required></td>
+  </tr>
+  <tr>
+    <td>AD</td>
+    <td><input value ="55"  type="number" name="totalDamage"  id="ad" required></td>
+  </tr>
+  <tr>
+    <td>Attack Speed from items %</td>
+    <td><input value ="15"  type="number" name="attackspeed" id="attackspeed" required></td>
+  </tr>
+  <tr>
+    <td>Crit % (0-100)</td>
+    <td><input value ="10"  type="number" name="crit" id="crit" required></td>
+  </tr>
+  <tr>
+    <td><input type="submit" id ="submit"></td>
+    <td> <span id = "result"></span></td>
+  </tr>
+</table>
 
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 
@@ -28,3 +56,6 @@
 
     });
 </script>
+
+</body>
+<html>
